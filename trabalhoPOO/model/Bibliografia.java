@@ -1,17 +1,27 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Bibliografia {
     private String livro;
-    private String autor;
+    private ArrayList<String> autores = new ArrayList<String>();
     private int edicao;
-    private long ISBN;
+    private String ISBN;
     private String editora;
     private int ano;
 
-    public Bibliografia(String livro, String autor, int edicao, long ISBN, String editora, int ano) {
-
+    public Bibliografia() {
+        super();
     }
 
+    public Bibliografia(String livro, String autores, int edicao, String ISBN, String editora, int ano) {
+        setLivro(livro);
+        addAutor(autores);
+        setEdicao(edicao);
+        setEditora(editora);
+        setISBN(ISBN);
+        setAno(ano);
+    }
     public String getLivro() {
         return livro;
     }    
@@ -22,13 +32,13 @@ public class Bibliografia {
         }
     }
 
-    public String getAutor() {
-        return autor;
+    public ArrayList<String> getAutores() {
+        return autores;
     }
 
-    public void setAutor(String autor) {
+    public void addAutor(String autor) {
         if (autor != null) {
-            this.autor = autor;
+            autores.add(autor);
         }
     }
 
@@ -42,12 +52,12 @@ public class Bibliografia {
         }
     }
 
-    public long getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
-    public void setISBN(long ISBN) {
-        if (ISBN != 0) {
+    public void setISBN(String ISBN) {
+        if (ISBN != null) {
             this.ISBN = ISBN;
         }
     }
@@ -72,7 +82,58 @@ public class Bibliografia {
         }
     }
 
+    public String definirNome(String nome) {
+        String s = "";
+        String aux = "";
+        int contEspaco = 0;
+        
+        aux += Character.toUpperCase(nome.charAt(0)) + ".";
+
+        for (int i = 0; i < nome.length(); i++) {
+            if (nome.charAt(i) == ' ') {
+                contEspaco++;
+            }
+        }
+
+        for (int i = 0, j = 0; j < contEspaco; i++) {
+            if (nome.charAt(i) == ' ') {
+                j++;
+                if (j != contEspaco)
+                    aux += Character.toUpperCase(nome.charAt(i+1)) + ".";
+            }
+
+            if (j == contEspaco) {
+                s += nome.substring(i+1, nome.length()) + ", ";
+            }
+        }
+        s += aux;
+
+        return s;
+    }
+
     public String toString() {
-        return String.format("%s. %s. %d ed. %s, %d. ISBN: %d", getAutor(), getLivro(), getEdicao(), getEditora(), getAno(), getISBN());
+        String bibliografia = "";
+
+        for (String a : autores) {
+            if (autores.size() == 1) {
+                bibliografia += definirNome(a);
+            } else {
+                bibliografia += definirNome(a) + "; ";
+            }
+        }
+        if (!bibliografia.endsWith("."))
+            bibliografia += ". ";
+
+        bibliografia += " " + getLivro() + ".";   
+        
+        bibliografia += String.format(" %d ed.", getEdicao());
+
+        bibliografia += " " + getEditora() + ", ";
+
+        bibliografia += String.format("%d. ", getAno());
+
+        bibliografia += String.format("ISBN: %s", getISBN());
+
+        return bibliografia;
     }
 }
