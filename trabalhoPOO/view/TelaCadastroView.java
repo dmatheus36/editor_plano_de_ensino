@@ -33,8 +33,6 @@ public class TelaCadastroView {
         login = sw.nextLine();
         System.out.print("Senha: ");
         senha = sw.nextLine();
-        System.out.print("Ocupacao: ");
-        ocupacao = sw.nextLine();
         controller.handleEvent("OK");
     }
 
