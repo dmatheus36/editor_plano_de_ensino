@@ -9,11 +9,11 @@ public class PlanoDeEnsino {
     private String codigoDisciplina;
     private String caraterDisciplina;
     private String regimeOfertaDisciplina;
-    private int chTotal;
-    private int chTeorica;
-    private int chPratica;
-    private int chEAD;
-    private int chExtensao;
+    private String chTotal;
+    private String chTeorica;
+    private String chPratica;
+    private String chEAD;
+    private String chExtensao;
     private Professor professor;
     private String unidade;
     private String curso;
@@ -31,27 +31,26 @@ public class PlanoDeEnsino {
 
     public PlanoDeEnsino() {
         super();
-        setAnoSemestre("2025.1");
-        setUnidade("Campus Russas");
-        setCurso("Ciência da Computação e Engenharia de software");
-        setNomeDisciplina("Programação orientada a objetos");
-        setCodigoDisciplina("RUS0006");
-        setJustificativa("O estudo das técnicas de programação constitui uma componente fundamental no aprendizado de engenharia de sistemas de software. É através da programação que os sistemas de software tornam-se produtos operacionais, passíveis de uso e comercialização. A Orientação a Objetos é um paradigma de programação maduro e largamente utilizado tanto na indústria quanto na academia. Um programa orientado a objetos é uma abstração do mundo real implementado através de um conjunto de objetos que interagem entre si para resolver, no universo computacional, um problema ou conjunto de problemas de um domínio de aplicação. Por esse motivo, o aprendizado das técnicas de programação orientada a objetos e, concomitantemente, a aplicação desse aprendizado através de uma linguagem de programação orientada a objetos, observando as boas práticas de desenvolvimento, torna-se uma necessidade e um fator diferencial.");
-        setEmenta("Introduzir o paradigma de Programação Orientada a Objetos (OO), juntamente com seus conceitos de classes, objetos, herança, encapsulamento e polimorfismo, além dos conceitos de Interfaces e exceções que são inerentes às linguagens de programação orientadas a objetos. Desenvolvimento de um pequeno sistema baseados no paradigma de programação OO.");
-        addObjetivos("Compreender os princípios da Orientação a Objetos");
-        addObjetivos("Compreender o paradigma da Programação Orientada a Objetos.");
-        addObjetivos("Desenvolver programas orientados a objetos em uma linguagem de programação (Java);");
-        addObjetivos("Entender noções básicas de reuso através de herança e biblioteca de classes;");
-        addObjetivos("Entender o conceito de separação de interesses e modularidade através do encapsulamento;");
-        addCalendarioAtividades(new CalendarioAtividades("Introdução a POO e à linguagem Java", "31/03", 2));
-        addCalendarioAtividades(new CalendarioAtividades("Definindo Características dos Objetos", "07/04", 2));
-        setMetodologiaEnsino("O conteúdo das aulas será ministrado presencialmente, com a utilização de quadro branco, pincéis, projetor e vídeos (quando necessários). Serão disponibilizados os seguintes materiais didáticos de apoio: vídeos, slides e listas de exercícios on-line. Os livros continuam sendo o principal material de apoio. Serão usados exemplos práticos e exercícios de fixação do conhecimento, principalmente nas aulas práticas. Também será adotado o uso de sala de aula invertida, simulação e gameficação, com utilização do Ambiente Multimeios de Ensino-Aprendizagem (AME), disponível em https://ame2.russas.ufc.br e ferramentas de Inteligência Artificial (IA), disponíveis na internet. As atividades contidas no AME contarão com questões objetivas e questões de codificação com correção automática pela plataforma. Todo e qualquer tipo de material da disciplina será disponibilizado no AME, assim como a realização das atividades on-line (individuais e em grupo). Os instrumentos avaliativos (provas) serão aplicados de forma presencial (avalições teórica e prática). Quaisquer dúvidas adicionais, o professor pode ser contatado no seguinte e-mail institucional: marcos.vinicius@ufc.br ou em seu gabinete na Unidade I do Campus Russas da UFC. Também é possível contar com o apoio dos monitores da disciplina, de forma presencial em horários disponibilizados no AME e virtualmente, por meio do grupo da disciplina no WhatsApp e no Discord.");
-        addAtividadeDiscente("Acompanhar o conteúdo (por meio do AME);");
-        addAtividadeDiscente("Participar das aulas;");
-        addAtividadeDiscente("Realizar os exercícios propostos (individuais e em grupo no AME);");
-        addAtividadeDiscente("Realizar as avaliações e trabalhos;");
-        addAtividadeDiscente("Realizar o acompanhamento de sua pontuação e frequência no SIGAA.");
-        setSistemaAvaliacao("Conforme o Regimento Geral da UFC, a avaliação de rendimento do aluno far-se-á segundo os critérios de assiduidade e eficiência. Na verificação da assiduidade será aprovado o aluno que frequentar 75% (setenta e cinco por cento) ou mais da carga horária da disciplina, vedado o abono de faltas. A verificação da eficiência compreenderá, no mínimo, duas avaliações progressivas e uma avaliação final. Será aprovado por média o aluno que apresentar média aritmética das notas resultantes das avaliações progressivas igual ou superior a 07 (sete). O aluno que apresentar a média igual ou superior a 04 (quatro) e inferior a 07 (sete), será submetido à avaliação final. Nesse caso, o aluno será aprovado quando obtiver nota igual ou superior a 04 (quatro) na avaliação final e média final igual ou superior a 05 (cinco). A verificação do aprendizado será dividida em duas unidades, com as avaliações progressivas (AP1 e AP2), nas quais teremos a aplicação de alguns instrumentos: Provas (P1 – subdividida em P1_TEÓRICA e P1_PRÁTICA; e P2 – subdividida em P2_TEÓRICA e P2_PRÁTICA); Atividades em Grupo (AG1 e AG2) e Atividades Individuais (AI1 e AI2). As provas têm como objetivo avaliar a aprendizagem dos conceitos abordados por meio de questões objetivas e/ou abertas (duas provas teóricas), e questões de codificação em Java (duas provas prática). As atividades em grupo (realizadas por grupos de três até quatro pessoas), têm como objetivo trabalhar a interação entre os alunos, de modo que consigam aplicar os conceitos aprendidos por meio do desenvolvimento de soluções computacionais orientadas a objetos, e, ao final da disciplina, elaborem um pequeno sistema orientado a objetos. E os trabalhos individuais buscam aferir o aprendizado de cada participante da disciplina ao longo do semestre, permitindo a realização de intervenções individualizadas. As notas atribuídas em todas as verificações da aprendizagem seguem a padronização definida no Art. 111 do Regimento Geral da UFC, os resultados das verificações do rendimento serão expressos em notas na escala de 0 (zero) a 10 (dez), com, no máximo, uma casa decimal.");
+        setAnoSemestre("---");
+        setNomeDisciplina("---");
+        setEstruturaCurricular("---");
+        setCodigoDisciplina("---");
+        setCaraterDisciplina("---");
+        setRegimeOfertaDisciplina("---");
+        setChTotal("---");
+        setChTeorica("---");
+        setChPratica("---");
+        setChEAD("---");
+        setChExtensao("---");
+        setUnidade("---");
+        setPreRequisitos("---");
+        setCoRequisitos("---");
+        setEquivalencias("---");
+        setJustificativa("---");
+        setEmenta("---");
+        setSistemaAvaliacao("---");
+        setMetodologiaEnsino("---");
+
 
     }
 
@@ -93,61 +92,61 @@ public class PlanoDeEnsino {
 
 
 
-    public int getChTotal() {
+    public String getChTotal() {
         return chTotal;
     }
 
 
 
-    public void setChTotal(int chTotal) {
+    public void setChTotal(String chTotal) {
         this.chTotal = chTotal;
     }
 
 
 
-    public int getChTeorica() {
+    public String getChTeorica() {
         return chTeorica;
     }
 
 
 
-    public void setChTeorica(int chTeorica) {
+    public void setChTeorica(String chTeorica) {
         this.chTeorica = chTeorica;
     }
 
 
 
-    public int getChPratica() {
+    public String getChPratica() {
         return chPratica;
     }
 
 
 
-    public void setChPratica(int chPratica) {
+    public void setChPratica(String chPratica) {
         this.chPratica = chPratica;
     }
 
 
 
-    public int getChEAD() {
+    public String getChEAD() {
         return chEAD;
     }
 
 
 
-    public void setChEAD(int chEAD) {
+    public void setChEAD(String chEAD) {
         this.chEAD = chEAD;
     }
 
 
 
-    public int getChExtensao() {
+    public String getChExtensao() {
         return chExtensao;
     }
 
 
 
-    public void setChExtensao(int chExtensao) {
+    public void setChExtensao(String chExtensao) {
         this.chExtensao = chExtensao;
     }
 
@@ -257,12 +256,20 @@ public class PlanoDeEnsino {
         objetivos.add(objetivo);
     }
 
+    public void removeObjetivos() {
+        objetivos.clear();
+    }
+
     public ArrayList<CalendarioAtividades> getCalendarioAtividades() {
         return calendarioAtividades;
     }
 
     public void addCalendarioAtividades(CalendarioAtividades cal) {
         calendarioAtividades.add(cal);
+    }
+
+    public void removeCalendarioAtividades() {
+        calendarioAtividades.clear();
     }
 
     public String getMetodologiaEnsino() {
@@ -281,6 +288,10 @@ public class PlanoDeEnsino {
         atividadeDiscente.add(at);
     }
 
+    public void removeAtividadeDiscente() {
+        atividadeDiscente.clear();
+    }
+
     public String getSistemaAvaliacao() {
         return sistemaAvaliacao;
     }
@@ -295,6 +306,10 @@ public class PlanoDeEnsino {
 
     public void addBibliografia(Bibliografia b) {
         bibliografia.add(b);
+    }
+
+    public void removeBibliografia() {
+        bibliografia.clear();
     }
 
     public String linha(int cont, String simbolo) {
@@ -366,15 +381,15 @@ public class PlanoDeEnsino {
         planoEnsino += String.format(" 1.6 Caráter da disciplina: %s\n", getCaraterDisciplina());
         planoEnsino += String.format(" 1.7 Regime de oferta da disciplina: %s\n", getRegimeOfertaDisciplina());
         planoEnsino += String.format(" 1.8 Carga horária\n");
-        planoEnsino += String.format("  - CH Total: %d\n", getChTotal());
-        planoEnsino += String.format("  - CH Teórica: %d\n", getChTeorica());
-        planoEnsino += String.format("  - CH Prática: %d\n", getChPratica());
-        planoEnsino += String.format("  - CH EAD: %d\n", getChEAD());
-        planoEnsino += String.format("  - CH Extensão: %d\n", getChExtensao());
+        planoEnsino += String.format("  - CH Total: %s\n", getChTotal());
+        planoEnsino += String.format("  - CH Teórica: %s\n", getChTeorica());
+        planoEnsino += String.format("  - CH Prática: %s\n", getChPratica());
+        planoEnsino += String.format("  - CH EAD: %s\n", getChEAD());
+        planoEnsino += String.format("  - CH Extensão: %s\n", getChExtensao());
         planoEnsino += String.format(" 1.9 Pré-requisitos (quando houver): %s\n", getPreRequisitos());
         planoEnsino += String.format(" 1.10 Co-requisitos (quando houver): %s\n", getCoRequisitos());
         planoEnsino += String.format(" 1.11 Equivalências: %s\n", getEquivalencias());
-        
+
 
         planoEnsino += linha(cont, "-");
         planoEnsino += " 2. Justificativa: \n";
@@ -510,9 +525,5 @@ public class PlanoDeEnsino {
         }
 
         return planoEnsino;
-
-        
-
     }
-
 }
