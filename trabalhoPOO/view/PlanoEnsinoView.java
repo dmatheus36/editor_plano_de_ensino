@@ -58,6 +58,7 @@ public class PlanoEnsinoView {
         if (model.getPlanoEnsinoAll().isEmpty()) {
             System.out.printf("%nNão existem planos de ensino cadastrados!");
             sc.nextLine();
+            return;
         } else {
             pl = new ArrayList<PlanoDeEnsino>(model.getPlanoEnsinoAll().values());
             for (PlanoDeEnsino p : pl) {
