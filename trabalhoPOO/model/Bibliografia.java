@@ -10,10 +10,6 @@ public class Bibliografia {
     private String editora;
     private int ano;
 
-    public Bibliografia() {
-        super();
-    }
-
     public Bibliografia(String livro, String autores, int edicao, String ISBN, String editora, int ano) {
         setLivro(livro);
         addAutor(autores);
@@ -37,9 +33,32 @@ public class Bibliografia {
     }
 
     public void addAutor(String autor) {
-        if (autor != null) {
+        int virgula = 0;
+        int begin = 0;
+        String sub1 = "";
+        for (int i = 0; i < autor.length(); i++) {
+            if (autor.charAt(i) == ',') {
+                virgula++;
+            }
+        }
+
+        if (virgula > 0) {
+            for (int i = 0; i < autor.length(); i++) {
+                if (autor.charAt(i) == ',') {
+                    sub1 = autor.substring(begin, i);
+                    autores.add(sub1);
+                    begin = i + 2;
+                }
+
+                if (i == autor.length()-1) {
+                    sub1 = autor.substring(begin, autor.length());
+                    autores.add(sub1);
+                }
+            }
+        } else {
             autores.add(autor);
         }
+        
     }
 
     public int getEdicao() {
