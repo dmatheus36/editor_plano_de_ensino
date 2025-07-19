@@ -1,9 +1,12 @@
 package model;
 
-public class Professor {
+import java.util.ArrayList;
+
+public class Professor implements Usuario{
     private String nome;
     private String login;
     private String senha;
+    private ArrayList<String> codigosDisciplina = new ArrayList<String>();
 
     public Professor(String nome, String login, String senha) {
         setNome(nome);
@@ -41,5 +44,18 @@ public class Professor {
         }
     }
 
+    public ArrayList<String> getCodigosDisciplina() {
+        return codigosDisciplina;
+    }
+
+    public void addCodigosDisciplina(String codigosDisciplina) {
+        this.codigosDisciplina.add(codigosDisciplina);
+    }
+
+    public void removeCodigosDisciplina(String codigo) {
+        
+    }
+
+    
 
 }
