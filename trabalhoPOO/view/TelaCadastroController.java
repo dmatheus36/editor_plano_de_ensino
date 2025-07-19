@@ -13,14 +13,8 @@ public class TelaCadastroController {
 
     public void handleEvent(String event) {
         if (view.getLogin() != null && view.getNome() != null && view.getSenha() != null) {
-            int comp = view.getOcupacao().compareTo("1");
-            if (comp == 0) {
-                Professor p = new Professor(view.getNome(), view.getLogin(), view.getSenha());
-                model.setUsuario(p);
-            } else {
-                //Aluno a = new Aluno(view.getNome(), view.getLogin(), view.getSenha());
-                //model.setUsuario(a);
-            }
+            Professor p = new Professor(view.getNome(), view.getLogin(), view.getSenha());
+            model.setUsuario(p);
             view.setFinalizar(true);
             view.exibeMSG("Cadastro realizado");
         } else {
